@@ -1,0 +1,69 @@
+.table {
+  background: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+
+  & .searchText {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.header {
+  display: flex;
+  & span {
+    padding: 30px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+  }
+  & span:first-child {
+    border-left: 1px solid black;
+  }
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  & span {
+    padding: 30px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  & span:first-child {
+    border-left: 1px solid black;
+  }
+}
+
+.md {
+  width: 200px;
+  flex-grow: 0;
+}
+
+.lg {
+  width: 250px;
+  flex-grow: 0;
+}
+
+.simpleUseContextDemo {
+  background: lightcoral;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.searchBox {
+  display: flex;
+  & p {
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  & input {
+    width: 300px;
+    font-size: 20px;
+  }
+}
