@@ -2,7 +2,7 @@ import styles from "./styles.module.scss";
 import { useUsers } from "./UserContext";
 
 export default function List() {
-  const { users, searchText } = useUsers();
+  const { filteredUsers, searchText } = useUsers();
   const header = [
     { name: "name", className: "md" },
     { name: "username", className: "md" },
@@ -23,7 +23,7 @@ export default function List() {
             </span>
           ))}
         </div>
-        {users.map((row) => {
+        {filteredUsers.map((row) => {
           return (
             <div key={row.id} className={styles.row}>
               {header.map((item) => (

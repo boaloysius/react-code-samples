@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { UserContext } from "./SimpleUseContext";
 
 export default function List() {
-  const { users, searchText } = useContext(UserContext);
+  const { filteredUsers, searchText } = useContext(UserContext);
   const header = [
     { name: "name", className: "md" },
     { name: "username", className: "md" },
@@ -24,7 +24,7 @@ export default function List() {
             </span>
           ))}
         </div>
-        {users.map((row) => {
+        {filteredUsers.map((row) => {
           return (
             <div key={row.id} className={styles.row}>
               {header.map((item) => (

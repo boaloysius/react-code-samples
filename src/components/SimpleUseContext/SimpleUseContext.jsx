@@ -34,7 +34,7 @@ export default function SimpleUseContext() {
   }, []);
   return (
     <UserContext.Provider
-      value={{ users: filteredUsers, setUsers, searchText, setSearchText }}
+      value={{ filteredUsers, setUsers, searchText, setSearchText }}
     >
       <div className={styles.simpleUseContextDemo}>
         <Search />
